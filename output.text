@@ -1,0 +1,75 @@
+
+				SYMBOL TABLE
+
+LINENO 		 SYMBOLS 		 VAlUES 	 TOTAL SIZE 		 D/UD
+2		a			1			4		Defined
+
+3		b			5			4		Defined
+
+4		c			15			4		Defined
+
+5		k			2.3			8		Defined
+
+6		msg			"rahul chavan"			12		Defined
+
+9		m			1			4		Defined
+
+16		main			-			-		Defined
+
+29		abc			-			-		Defined
+
+34		pqr			-			-		Undefined
+
+
+
+		LITERAL TABLE
+
+LINENO 	 LITERAL VALUE 		 HEX VALUE
+22		z		0x7a
+
+23		7		0x7
+
+24		3		0x3
+
+25		15		0xf
+
+26		r		0x72
+
+33		8		0x8
+
+
+
+			Intermediate Code
+
+
+op#5	reg32,sym#1		mov eax,a			000006
+
+op#5	reg32,sym#2		mov ebx,b			000012
+
+op#5D	reg16,reg16		mov ax,bx			000016
+
+op#5E	reg8,reg8		mov ah,al			000020
+
+op#5B	reg8,sym#4		mov bh,k			000024
+
+op#52	reg8,lit#1		mov ch,'z'			000030
+
+op#52	reg8,lit#2		mov dh,7			000036
+
+op#51	reg32,lit#3		mov eax,3			000042
+
+op#51	reg32,lit#4		mov ecx,15			000052
+
+op#51	reg32,lit#5		mov eax,'r'			000066
+
+op#5	reg32,sym#3		mov ebx,c			000072
+
+op#6C	reg32,reg32		add eax,ebx			000076
+
+op#8	reg32			push eax			000078
+
+op#8A	sym#5			push msg				000080
+
+op#61	reg32,lit#6		add esp,8			000086
+
+op#10A	sym#9			jmp pqr				000088
